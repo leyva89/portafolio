@@ -1,0 +1,508 @@
+/* ===================================
+   Custom Variables & Design System
+   =================================== */
+:root {
+    /* Elegant Animal Theme Colors */
+    --color-primary: #f59e0b;      /* Amber 500 */
+    --color-primary-light: #fbbf24; /* Amber 400 */
+    --color-primary-dark: #d97706;  /* Amber 600 */
+    --color-secondary: #ea580c;     /* Orange 600 */
+    --color-accent: #78350f;        /* Brown 900 */
+    
+    /* Neutral Elegance */
+    --color-slate-900: #0f172a;
+    --color-slate-800: #1e293b;
+    --color-slate-700: #334155;
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* ===================================
+   Global Styles
+   =================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow-x: hidden;
+}
+
+.font-playfair {
+    font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* ===================================
+   Smooth Scroll
+   =================================== */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ===================================
+   Custom Animations
+   =================================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes pawPrint {
+    0% {
+        opacity: 0.1;
+        transform: scale(0.5) rotate(0deg);
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 0.1;
+        transform: scale(1.5) rotate(360deg);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+/* ===================================
+   Animation Classes
+   =================================== */
+.animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.floating {
+    animation: float 6s ease-in-out infinite;
+}
+
+.card-hover {
+    transition: var(--transition-smooth);
+}
+
+.card-hover:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px rgba(245, 158, 11, 0.3);
+}
+
+/* ===================================
+   Paw Pattern Background
+   =================================== */
+.paw-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.05;
+    background-image: 
+        radial-gradient(circle at 20% 30%, rgba(245, 158, 11, 0.3) 2px, transparent 2px),
+        radial-gradient(circle at 80% 70%, rgba(245, 158, 11, 0.3) 2px, transparent 2px),
+        radial-gradient(circle at 40% 80%, rgba(245, 158, 11, 0.3) 2px, transparent 2px),
+        radial-gradient(circle at 60% 20%, rgba(245, 158, 11, 0.3) 2px, transparent 2px);
+    background-size: 200px 200px;
+    animation: pawPrint 20s linear infinite;
+    pointer-events: none;
+}
+
+/* ===================================
+   Decorative Animal Silhouettes
+   =================================== */
+.animal-silhouette {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    opacity: 0.05;
+    color: var(--color-primary);
+    pointer-events: none;
+}
+
+.animal-1 {
+    bottom: 10%;
+    right: 5%;
+    animation: float 8s ease-in-out infinite;
+}
+
+/* ===================================
+   Navigation Styles
+   =================================== */
+#navbar {
+    transition: var(--transition-smooth);
+}
+
+#navbar.scrolled {
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 4px 20px rgba(245, 158, 11, 0.1);
+}
+
+.nav-link {
+    position: relative;
+    padding-bottom: 4px;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* ===================================
+   Section Titles
+   =================================== */
+.section-title {
+    position: relative;
+    display: inline-block;
+    animation: fadeIn 1s ease-out;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+    border-radius: 2px;
+}
+
+/* ===================================
+   Skills Carousel Styles
+   =================================== */
+.skills-carousel-container {
+    position: relative;
+    padding: 20px 0;
+}
+
+.skills-carousel {
+    display: flex;
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.skill-card {
+    min-width: 256px;
+    transition: var(--transition-smooth);
+}
+
+.skill-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    border-color: var(--color-primary) !important;
+    box-shadow: 0 20px 40px rgba(245, 158, 11, 0.3);
+}
+
+.skill-card svg {
+    transition: var(--transition-bounce);
+}
+
+.skill-card:hover svg {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* ===================================
+   Projects Carousel Styles
+   =================================== */
+.projects-carousel-container {
+    position: relative;
+}
+
+.projects-carousel {
+    display: flex;
+}
+
+.project-card {
+    flex: 0 0 100%;
+}
+
+.project-dot {
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.project-dot:hover {
+    transform: scale(1.3);
+}
+
+.project-dot.active {
+    background-color: var(--color-primary) !important;
+    width: 2rem;
+    border-radius: 0.75rem;
+}
+
+/* ===================================
+   Button Styles
+   =================================== */
+.btn-primary,
+.btn-secondary {
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition-smooth);
+}
+
+.btn-primary::before,
+.btn-secondary::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn-primary:hover::before,
+.btn-secondary:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn-primary:active,
+.btn-secondary:active {
+    transform: scale(0.95);
+}
+
+/* ===================================
+   Scroll Animations
+   =================================== */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+}
+
+.scroll-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===================================
+   Custom Scrollbar
+   =================================== */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-slate-900);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, var(--color-primary), var(--color-secondary));
+    border-radius: 6px;
+    border: 2px solid var(--color-slate-900);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, var(--color-primary-light), var(--color-primary));
+}
+
+/* ===================================
+   Responsive Design
+   =================================== */
+@media (max-width: 768px) {
+    .skills-carousel {
+        gap: 1rem;
+    }
+    
+    .skill-card {
+        min-width: 200px;
+    }
+    
+    .section-title {
+        font-size: 2.5rem !important;
+    }
+    
+    .animal-silhouette {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 640px) {
+    .skill-card {
+        min-width: 180px;
+    }
+    
+    .section-title {
+        font-size: 2rem !important;
+    }
+}
+
+/* ===================================
+   Loading Animation
+   =================================== */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.gradient-animate {
+    background-size: 200% 200%;
+    animation: gradientShift 5s ease infinite;
+}
+
+/* ===================================
+   Decorative Elements
+   =================================== */
+.decorative-line {
+    position: relative;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--color-primary), transparent);
+    margin: 2rem 0;
+}
+
+/* ===================================
+   Card Glow Effect
+   =================================== */
+.glow-on-hover {
+    position: relative;
+}
+
+.glow-on-hover::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    background: linear-gradient(45deg, var(--color-primary), var(--color-secondary), var(--color-primary));
+    background-size: 400%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    filter: blur(10px);
+    z-index: -1;
+}
+
+.glow-on-hover:hover::before {
+    opacity: 0.7;
+    animation: gradientShift 3s ease infinite;
+}
+
+/* ===================================
+   Text Selection
+   =================================== */
+::selection {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+::-moz-selection {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+/* ===================================
+   Accessibility
+   =================================== */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Focus styles for keyboard navigation */
+a:focus,
+button:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 4px;
+}
+
+/* ===================================
+   Print Styles
+   =================================== */
+@media print {
+    .paw-pattern,
+    .animal-silhouette,
+    nav,
+    footer {
+        display: none;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+}

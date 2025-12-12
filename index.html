@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio profesional con diseño animalista elegante">
+    <title>Mi Portafolio - Diseño Animalista</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+
+    <!-- Navigation -->
+    <nav id="navbar"
+        class="fixed top-0 left-0 right-0 z-50 bg-slate-900/80 backdrop-blur-md border-b border-amber-500/20 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <svg class="w-10 h-10 text-amber-500" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z" />
+                    </svg>
+                    <span class="text-2xl font-bold font-playfair text-amber-500">Portafolio</span>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home"
+                        class="nav-link text-gray-300 hover:text-amber-500 transition-colors duration-300">Inicio</a>
+                    <a href="#about"
+                        class="nav-link text-gray-300 hover:text-amber-500 transition-colors duration-300">Acerca de
+                        Mí</a>
+                    <a href="#skills"
+                        class="nav-link text-gray-300 hover:text-amber-500 transition-colors duration-300">Habilidades</a>
+                    <a href="#projects"
+                        class="nav-link text-gray-300 hover:text-amber-500 transition-colors duration-300">Proyectos</a>
+                    <a href="#contact"
+                        class="nav-link text-gray-300 hover:text-amber-500 transition-colors duration-300">Contacto</a>
+                </div>
+
+                <button id="menuToggle" class="md:hidden text-amber-500 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4 space-y-3">
+                <a href="#home"
+                    class="block text-gray-300 hover:text-amber-500 transition-colors duration-300">Inicio</a>
+                <a href="#about" class="block text-gray-300 hover:text-amber-500 transition-colors duration-300">Acerca
+                    de Mí</a>
+                <a href="#skills"
+                    class="block text-gray-300 hover:text-amber-500 transition-colors duration-300">Habilidades</a>
+                <a href="#projects"
+                    class="block text-gray-300 hover:text-amber-500 transition-colors duration-300">Proyectos</a>
+                <a href="#contact"
+                    class="block text-gray-300 hover:text-amber-500 transition-colors duration-300">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+        <div class="paw-pattern"></div>
+
+        <div class="container mx-auto px-6 z-10">
+            <div class="text-center animate-fade-in">
+                <div class="mb-8 relative inline-block">
+                    <div
+                        class="w-48 h-48 mx-auto rounded-full overflow-hidden border-4 border-amber-500/50 shadow-2xl floating">
+                        <div
+                            class="w-full h-full bg-gradient-to-br from-amber-600 to-orange-700 flex items-center justify-center">
+                            <svg class="w-32 h-32 text-white" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <h1
+                    class="text-6xl md:text-7xl font-bold font-playfair mb-6 text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-500 to-amber-600">
+                    Hola, Soy Desarrollador
+                </h1>
+
+                <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                    Creando experiencias digitales únicas con pasión y creatividad
+                </p>
+
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#projects"
+                        class="btn-primary px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-600 rounded-full font-semibold hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-amber-500/50">
+                        Ver Proyectos
+                    </a>
+                    <a href="#contact"
+                        class="btn-secondary px-8 py-4 border-2 border-amber-500 rounded-full font-semibold hover:bg-amber-500 hover:scale-105 transition-all duration-300">
+                        Contáctame
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Decorative Animals -->
+        <div class="animal-silhouette animal-1">
+            <svg viewBox="0 0 100 100" fill="currentColor">
+                <path
+                    d="M50,20 Q60,30 50,40 Q40,30 50,20 M30,45 Q40,55 30,65 Q20,55 30,45 M70,45 Q80,55 70,65 Q60,55 70,45 M50,50 Q65,70 50,85 Q35,70 50,50" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-24 relative">
+        <div class="container mx-auto px-6">
+            <h2
+                class="section-title text-5xl font-bold font-playfair text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500">
+                Acerca de Mí
+            </h2>
+
+            <div class="max-w-4xl mx-auto">
+                <div
+                    class="bg-slate-800/50 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-amber-500/20 shadow-2xl hover:shadow-amber-500/10 transition-all duration-500 card-hover">
+                    <div class="flex flex-col md:flex-row items-center gap-8">
+                        <div class="flex-shrink-0">
+                            <div
+                                class="w-48 h-48 rounded-full bg-gradient-to-br from-amber-500/20 to-orange-500/20 flex items-center justify-center border-2 border-amber-500/30">
+                                <svg class="w-32 h-32 text-amber-500" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="1.5">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="12" cy="7" r="4"></circle>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="flex-1 text-center md:text-left">
+                            <h3 class="text-3xl font-bold font-playfair text-amber-400 mb-4">¡Hola! Soy [Tu Nombre]</h3>
+                            <p class="text-gray-300 leading-relaxed mb-6 text-lg">
+                                Soy un desarrollador apasionado por crear experiencias web únicas e innovadoras.
+                                Con un enfoque en el diseño elegante y la funcionalidad impecable, me especializo
+                                en transformar ideas en realidades digitales que cautivan y funcionan a la perfección.
+                            </p>
+                            <p class="text-gray-400 leading-relaxed text-lg">
+                                Mi filosofía de trabajo se inspira en la naturaleza: adaptable como un camaleón,
+                                ágil como un guepardo, y siempre buscando la elegancia en cada línea de código.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section with Carousel -->
+    <section id="skills" class="py-24 relative overflow-hidden">
+        <div class="container mx-auto px-6">
+            <h2
+                class="section-title text-5xl font-bold font-playfair text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500">
+                Mis Habilidades
+            </h2>
+
+            <div class="relative max-w-6xl mx-auto">
+                <div class="skills-carousel-container overflow-hidden">
+                    <div id="skillsCarousel" class="skills-carousel flex gap-8 transition-transform duration-500">
+
+                        <!-- HTML Skill -->
+                        <div
+                            class="skill-card flex-shrink-0 w-64 bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-amber-500/20 hover:border-amber-500/50 transition-all duration-300 text-center card-hover">
+                            <div class="mb-4">
+                                <svg class="w-24 h-24 mx-auto text-orange-500" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12,17.56L16.07,16.43L16.62,10.33H9.38L9.2,8.3H16.8L17,6.31H7L7.56,12.32H14.45L14.22,14.9L12,15.5L9.78,14.9L9.64,13.24H7.64L7.93,16.43L12,17.56M4.07,3H19.93L18.5,19.2L12,21L5.5,19.2L4.07,3Z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-amber-400 mb-2">HTML5</h3>
+                            <p class="text-gray-400 text-sm">Estructura Web</p>
+                        </div>
+
+                        <!-- CSS Skill -->
+                        <div
+                            class="skill-card flex-shrink-0 w-64 bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-amber-500/20 hover:border-amber-500/50 transition-all duration-300 text-center card-hover">
+                            <div class="mb-4">
+                                <svg class="w-24 h-24 mx-auto text-teal-500" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M5,3L4.35,6.34H17.94L17.5,8.5H3.92L3.26,11.83H16.85L16.09,15.64L10.61,17.45L5.86,15.64L6.19,14H2.85L2.06,18L9.91,21L18.96,18L20.16,11.97L20.4,10.76L21.94,3H5Z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-amber-400 mb-2">CSS3</h3>
+                            <p class="text-gray-400 text-sm">Estilo Elegante</p>
+                        </div>
+
+                        <!-- JavaScript Skill -->
+                        <div
+                            class="skill-card flex-shrink-0 w-64 bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-amber-500/20 hover:border-amber-500/50 transition-all duration-300 text-center card-hover">
+                            <div class="mb-4">
+                                <svg class="w-24 h-24 mx-auto text-yellow-400" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M3,3H21V21H3V3M7.73,18.04C8.13,18.89 8.92,19.59 10.27,19.59C11.77,19.59 12.8,18.79 12.8,17.04V11.26H11.1V17C11.1,17.86 10.75,18.08 10.2,18.08C9.62,18.08 9.38,17.68 9.11,17.21L7.73,18.04M13.71,17.86C14.21,18.84 15.22,19.59 16.8,19.59C18.4,19.59 19.6,18.76 19.6,17.23C19.6,15.82 18.79,15.19 17.35,14.57L16.93,14.39C16.2,14.08 15.89,13.87 15.89,13.37C15.89,12.96 16.2,12.64 16.7,12.64C17.18,12.64 17.5,12.85 17.79,13.37L19.1,12.5C18.55,11.54 17.77,11.17 16.7,11.17C15.19,11.17 14.22,12.13 14.22,13.4C14.22,14.78 15.03,15.43 16.25,15.95L16.67,16.13C17.45,16.47 17.91,16.68 17.91,17.26C17.91,17.74 17.46,18.09 16.76,18.09C15.93,18.09 15.45,17.66 15.09,17.06L13.71,17.86Z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-amber-400 mb-2">JavaScript</h3>
+                            <p class="text-gray-400 text-sm">Interactividad</p>
+                        </div>
+
+                        <!-- React Skill -->
+                        <div
+                            class="skill-card flex-shrink-0 w-64 bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-amber-500/20 hover:border-amber-500/50 transition-all duration-300 text-center card-hover">
+                            <div class="mb-4">
+                                <svg class="w-24 h-24 mx-auto text-blue-400" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12,10.11C13.03,10.11 13.87,10.95 13.87,12C13.87,13 13.03,13.85 12,13.85C10.97,13.85 10.13,13 10.13,12C10.13,10.95 10.97,10.11 12,10.11M7.37,20C8,20.38 9.38,19.8 10.97,18.3C10.45,17.71 9.94,17.07 9.46,16.4C8.64,16.32 7.83,16.2 7.06,16.04C6.55,18.18 6.74,19.65 7.37,20M8.08,14.26L7.79,13.75C7.68,14.04 7.57,14.33 7.5,14.61C7.77,14.67 8.07,14.72 8.38,14.77C8.28,14.6 8.18,14.43 8.08,14.26M14.62,13.5L15.43,12L14.62,10.5C14.32,9.97 14,9.5 13.71,9.03C13.17,9 12.6,9 12,9C11.4,9 10.83,9 10.29,9.03C10,9.5 9.68,9.97 9.38,10.5L8.57,12L9.38,13.5C9.68,14.03 10,14.5 10.29,14.97C10.83,15 11.4,15 12,15C12.6,15 13.17,15 13.71,14.97C14,14.5 14.32,14.03 14.62,13.5M12,6.78C11.81,7 11.61,7.23 11.41,7.5C11.61,7.5 11.8,7.5 12,7.5C12.2,7.5 12.39,7.5 12.59,7.5C12.39,7.23 12.19,7 12,6.78M12,17.22C12.19,17 12.39,16.77 12.59,16.5C12.39,16.5 12.2,16.5 12,16.5C11.8,16.5 11.61,16.5 11.41,16.5C11.61,16.77 11.81,17 12,17.22M16.62,4C16,3.62 14.62,4.2 13.03,5.7C13.55,6.29 14.06,6.93 14.54,7.6C15.36,7.68 16.17,7.8 16.94,7.96C17.45,5.82 17.26,4.35 16.62,4M15.92,9.74L16.21,10.25C16.32,9.96 16.43,9.67 16.5,9.39C16.23,9.33 15.93,9.28 15.62,9.23C15.72,9.4 15.82,9.57 15.92,9.74M17.37,2.69C18.84,3.53 19,5.74 18.38,8.32C20.92,9.07 22.75,10.31 22.75,12C22.75,13.69 20.92,14.93 18.38,15.68C19,18.26 18.84,20.47 17.37,21.31C15.91,22.15 13.92,21.19 12,19.36C10.08,21.19 8.09,22.15 6.62,21.31C5.16,20.47 5,18.26 5.62,15.68C3.08,14.93 1.25,13.69 1.25,12C1.25,10.31 3.08,9.07 5.62,8.32C5,5.74 5.16,3.53 6.62,2.69C8.09,1.85 10.08,2.81 12,4.64C13.92,2.81 15.91,1.85 17.37,2.69M17.08,12C17.42,12.75 17.72,13.5 17.97,14.26C20.07,13.63 21.25,12.73 21.25,12C21.25,11.27 20.07,10.37 17.97,9.74C17.72,10.5 17.42,11.25 17.08,12M6.92,12C6.58,11.25 6.28,10.5 6.03,9.74C3.93,10.37 2.75,11.27 2.75,12C2.75,12.73 3.93,13.63 6.03,14.26C6.28,13.5 6.58,12.75 6.92,12M15.92,14.26C15.82,14.43 15.72,14.6 15.62,14.77C15.93,14.72 16.23,14.67 16.5,14.61C16.43,14.33 16.32,14.04 16.21,13.75L15.92,14.26M13.03,18.3C14.62,19.8 16,20.38 16.62,20C17.26,19.65 17.45,18.18 16.94,16.04C16.17,16.2 15.36,16.32 14.54,16.4C14.06,17.07 13.55,17.71 13.03,18.3M8.08,9.74C8.18,9.57 8.28,9.4 8.38,9.23C8.07,9.28 7.77,9.33 7.5,9.39C7.57,9.67 7.68,9.96 7.79,10.25L8.08,9.74M10.97,5.7C9.38,4.2 8,3.62 7.37,4C6.74,4.35 6.55,5.82 7.06,7.96C7.83,7.8 8.64,7.68 9.46,7.6C9.94,6.93 10.45,6.29 10.97,5.7Z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-amber-400 mb-2">React</h3>
+                            <p class="text-gray-400 text-sm">UI Moderna</p>
+                        </div>
+
+                        <!-- Node.js Skill -->
+                        <div
+                            class="skill-card flex-shrink-0 w-64 bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-amber-500/20 hover:border-amber-500/50 transition-all duration-300 text-center card-hover">
+                            <div class="mb-4">
+                                <svg class="w-24 h-24 mx-auto text-green-500" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12,1.85C11.73,1.85 11.45,1.92 11.22,2.05L3.78,6.35C3.32,6.61 3,7.11 3,7.65V16.35C3,16.89 3.32,17.39 3.78,17.65L5.73,18.77C6.68,19.23 7,19.24 7.44,19.24C8.84,19.24 9.65,18.39 9.65,16.91V8.44C9.65,8.32 9.55,8.22 9.43,8.22H8.5C8.37,8.22 8.27,8.32 8.27,8.44V16.91C8.27,17.57 7.59,18.22 6.5,17.67L4.45,16.5C4.38,16.45 4.34,16.39 4.34,16.31V7.69C4.34,7.61 4.38,7.55 4.45,7.5L11.89,3.21C11.95,3.17 12.05,3.17 12.11,3.21L19.55,7.5C19.62,7.55 19.66,7.61 19.66,7.69V16.31C19.66,16.39 19.62,16.45 19.55,16.5L12.11,20.79C12.05,20.83 11.95,20.83 11.88,20.79L10,19.65C9.92,19.62 9.84,19.61 9.79,19.64C9.26,19.94 9.16,20 8.67,20.15C8.55,20.19 8.36,20.26 8.74,20.47L11.22,21.94C11.46,22.08 11.72,22.15 12,22.15C12.28,22.15 12.54,22.08 12.78,21.94L20.22,17.65C20.68,17.39 21,16.89 21,16.35V7.65C21,7.11 20.68,6.61 20.22,6.35L12.78,2.05C12.55,1.92 12.28,1.85 12,1.85M14,8C11.88,8 10.61,8.89 10.61,10.39C10.61,12 11.87,12.47 13.91,12.67C16.34,12.91 16.53,13.27 16.53,13.75C16.53,14.58 15.86,14.93 14.3,14.93C12.32,14.93 11.9,14.44 11.75,13.46C11.73,13.36 11.64,13.28 11.53,13.28H10.57C10.45,13.28 10.36,13.37 10.36,13.5C10.36,14.74 11.04,16.24 14.3,16.24C16.65,16.24 18,15.31 18,13.69C18,12.08 16.92,11.66 14.63,11.35C12.32,11.05 12.09,10.89 12.09,10.35C12.09,9.9 12.29,9.3 14,9.3C15.5,9.3 16.09,9.63 16.32,10.66C16.34,10.76 16.43,10.83 16.53,10.83H17.5C17.55,10.83 17.61,10.81 17.65,10.76C17.69,10.72 17.72,10.66 17.7,10.6C17.56,8.82 16.38,8 14,8Z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-amber-400 mb-2">Node.js</h3>
+                            <p class="text-gray-400 text-sm">Backend</p>
+                        </div>
+
+                        <!-- Git Skill -->
+                        <div
+                            class="skill-card flex-shrink-0 w-64 bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-amber-500/20 hover:border-amber-500/50 transition-all duration-300 text-center card-hover">
+                            <div class="mb-4">
+                                <svg class="w-24 h-24 mx-auto text-red-500" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M2.6,10.59L8.38,4.8L10.07,6.5C9.83,7.35 10.22,8.28 11,8.73V14.27C10.4,14.61 10,15.26 10,16A2,2 0 0,0 12,18A2,2 0 0,0 14,16C14,15.26 13.6,14.61 13,14.27V9.41L15.07,11.5C15,11.65 15,11.82 15,12A2,2 0 0,0 17,14A2,2 0 0,0 19,12A2,2 0 0,0 17,10C16.82,10 16.65,10 16.5,10.07L13.93,7.5C14.19,6.57 13.71,5.55 12.78,5.16C12.35,5 11.9,4.96 11.5,5.07L9.8,3.38L10.59,2.6C11.37,1.81 12.63,1.81 13.41,2.6L21.4,10.59C22.19,11.37 22.19,12.63 21.4,13.41L13.41,21.4C12.63,22.19 11.37,22.19 10.59,21.4L2.6,13.41C1.81,12.63 1.81,11.37 2.6,10.59Z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-amber-400 mb-2">Git</h3>
+                            <p class="text-gray-400 text-sm">Control de Versiones</p>
+                        </div>
+
+                        <!-- Tailwind Skill -->
+                        <div
+                            class="skill-card flex-shrink-0 w-64 bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-amber-500/20 hover:border-amber-500/50 transition-all duration-300 text-center card-hover">
+                            <div class="mb-4">
+                                <svg class="w-24 h-24 mx-auto text-cyan-400" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12,6C9.33,6 7.67,7.33 7,10C8,8.67 9.17,8.17 10.5,8.5C11.26,8.67 11.81,9.23 12.41,9.84C13.39,10.85 14.5,12 17,12C19.67,12 21.33,10.67 22,8C21,9.33 19.83,9.83 18.5,9.5C17.74,9.33 17.19,8.77 16.59,8.16C15.61,7.15 14.5,6 12,6M7,12C4.33,12 2.67,13.33 2,16C3,14.67 4.17,14.17 5.5,14.5C6.26,14.67 6.81,15.23 7.41,15.84C8.39,16.85 9.5,18 12,18C14.67,18 16.33,16.67 17,14C16,15.33 14.83,15.83 13.5,15.5C12.74,15.33 12.19,14.77 11.59,14.16C10.61,13.15 9.5,12 7,12Z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-amber-400 mb-2">Tailwind CSS</h3>
+                            <p class="text-gray-400 text-sm">Diseño Rápido</p>
+                        </div>
+
+                        <!-- TypeScript Skill -->
+                        <div
+                            class="skill-card flex-shrink-0 w-64 bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-amber-500/20 hover:border-amber-500/50 transition-all duration-300 text-center card-hover">
+                            <div class="mb-4">
+                                <svg class="w-24 h-24 mx-auto text-blue-600" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M3,3H21V21H3V3M13.71,17.86C14.21,18.84 15.22,19.59 16.8,19.59C18.4,19.59 19.6,18.76 19.6,17.23C19.6,15.82 18.79,15.19 17.35,14.57L16.93,14.39C16.2,14.08 15.89,13.87 15.89,13.37C15.89,12.96 16.2,12.64 16.7,12.64C17.18,12.64 17.5,12.85 17.79,13.37L19.1,12.5C18.55,11.54 17.77,11.17 16.7,11.17C15.19,11.17 14.22,12.13 14.22,13.4C14.22,14.78 15.03,15.43 16.25,15.95L16.67,16.13C17.45,16.47 17.91,16.68 17.91,17.26C17.91,17.74 17.46,18.09 16.76,18.09C15.93,18.09 15.45,17.66 15.09,17.06L13.71,17.86M13,11.25H8V12.75H9.5V20H11.25V12.75H13V11.25Z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-amber-400 mb-2">TypeScript</h3>
+                            <p class="text-gray-400 text-sm">Tipado Fuerte</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Carousel Controls -->
+                <button id="skillsPrev"
+                    class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-amber-500 hover:bg-amber-600 text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-10">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
+                        </path>
+                    </svg>
+                </button>
+                <button id="skillsNext"
+                    class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-amber-500 hover:bg-amber-600 text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-10">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section with Carousel -->
+    <section id="projects" class="py-24 relative">
+        <div class="container mx-auto px-6">
+            <h2
+                class="section-title text-5xl font-bold font-playfair text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500">
+                Mis Proyectos
+            </h2>
+
+            <div class="relative max-w-6xl mx-auto">
+                <div class="projects-carousel-container overflow-hidden rounded-3xl">
+                    <div id="projectsCarousel" class="projects-carousel flex transition-transform duration-500">
+
+                        <!-- Project 1 -->
+                        <div class="project-card flex-shrink-0 w-full px-4">
+                            <div
+                                class="bg-slate-800/50 backdrop-blur-sm rounded-3xl overflow-hidden border border-amber-500/20 hover:border-amber-500/50 transition-all duration-300 card-hover">
+                                <div
+                                    class="h-64 bg-gradient-to-br from-amber-500/20 to-orange-500/20 flex items-center justify-center">
+                                    <svg class="w-32 h-32 text-amber-500" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="1.5">
+                                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                                    </svg>
+                                </div>
+                                <div class="p-8">
+                                    <h3 class="text-3xl font-bold font-playfair text-amber-400 mb-4">Proyecto E-commerce
+                                    </h3>
+                                    <p class="text-gray-300 mb-6 leading-relaxed">
+                                        Plataforma de comercio electrónico moderna con carrito de compras,
+                                        pasarela de pagos y sistema de gestión de inventario.
+                                    </p>
+                                    <div class="flex flex-wrap gap-2 mb-6">
+                                        <span
+                                            class="px-3 py-1 bg-amber-500/20 text-amber-400 rounded-full text-sm">React</span>
+                                        <span
+                                            class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">Node.js</span>
+                                        <span
+                                            class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm">MongoDB</span>
+                                    </div>
+                                    <a href="#"
+                                        class="inline-flex items-center text-amber-400 hover:text-amber-300 font-semibold transition-colors">
+                                        Ver Proyecto
+                                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 2 -->
+                        <div class="project-card flex-shrink-0 w-full px-4">
+                            <div
+                                class="bg-slate-800/50 backdrop-blur-sm rounded-3xl overflow-hidden border border-amber-500/20 hover:border-amber-500/50 transition-all duration-300 card-hover">
+                                <div
+                                    class="h-64 bg-gradient-to-br from-teal-500/20 to-blue-500/20 flex items-center justify-center">
+                                    <svg class="w-32 h-32 text-teal-500" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="1.5">
+                                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                                    </svg>
+                                </div>
+                                <div class="p-8">
+                                    <h3 class="text-3xl font-bold font-playfair text-amber-400 mb-4">Dashboard Analítico
+                                    </h3>
+                                    <p class="text-gray-300 mb-6 leading-relaxed">
+                                        Panel de control interactivo con visualizaciones dinámicas,
+                                        gráficos en tiempo real y reportes automatizados.
+                                    </p>
+                                    <div class="flex flex-wrap gap-2 mb-6">
+                                        <span
+                                            class="px-3 py-1 bg-amber-500/20 text-amber-400 rounded-full text-sm">Vue.js</span>
+                                        <span
+                                            class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">D3.js</span>
+                                        <span
+                                            class="px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-sm">Firebase</span>
+                                    </div>
+                                    <a href="#"
+                                        class="inline-flex items-center text-amber-400 hover:text-amber-300 font-semibold transition-colors">
+                                        Ver Proyecto
+                                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 3 -->
+                        <div class="project-card flex-shrink-0 w-full px-4">
+                            <div
+                                class="bg-slate-800/50 backdrop-blur-sm rounded-3xl overflow-hidden border border-amber-500/20 hover:border-amber-500/50 transition-all duration-300 card-hover">
+                                <div
+                                    class="h-64 bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center">
+                                    <svg class="w-32 h-32 text-purple-500" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="1.5">
+                                        <path
+                                            d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                                        </path>
+                                        <polyline points="7.5 4.21 12 6.81 16.5 4.21"></polyline>
+                                        <polyline points="7.5 19.79 7.5 14.6 3 12"></polyline>
+                                        <polyline points="21 12 16.5 14.6 16.5 19.79"></polyline>
+                                        <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                        <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                                    </svg>
+                                </div>
+                                <div class="p-8">
+                                    <h3 class="text-3xl font-bold font-playfair text-amber-400 mb-4">App Móvil Social
+                                    </h3>
+                                    <p class="text-gray-300 mb-6 leading-relaxed">
+                                        Aplicación social multiplataforma con chat en tiempo real,
+                                        compartir contenido y geolocalización.
+                                    </p>
+                                    <div class="flex flex-wrap gap-2 mb-6">
+                                        <span
+                                            class="px-3 py-1 bg-amber-500/20 text-amber-400 rounded-full text-sm">React
+                                            Native</span>
+                                        <span
+                                            class="px-3 py-1 bg-red-500/20 text-red-400 rounded-full text-sm">Socket.io</span>
+                                        <span
+                                            class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">PostgreSQL</span>
+                                    </div>
+                                    <a href="#"
+                                        class="inline-flex items-center text-amber-400 hover:text-amber-300 font-semibold transition-colors">
+                                        Ver Proyecto
+                                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Project Carousel Controls -->
+                <button id="projectsPrev"
+                    class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-amber-500 hover:bg-amber-600 text-white p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-10">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
+                        </path>
+                    </svg>
+                </button>
+                <button id="projectsNext"
+                    class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-amber-500 hover:bg-amber-600 text-white p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-10">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+
+                <!-- Dots Indicator -->
+                <div class="flex justify-center gap-3 mt-8">
+                    <button class="project-dot w-3 h-3 rounded-full bg-amber-500 transition-all duration-300"
+                        data-index="0"></button>
+                    <button
+                        class="project-dot w-3 h-3 rounded-full bg-gray-600 hover:bg-amber-500/50 transition-all duration-300"
+                        data-index="1"></button>
+                    <button
+                        class="project-dot w-3 h-3 rounded-full bg-gray-600 hover:bg-amber-500/50 transition-all duration-300"
+                        data-index="2"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 relative">
+        <div class="container mx-auto px-6">
+            <h2
+                class="section-title text-5xl font-bold font-playfair text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500">
+                Contacto
+            </h2>
+
+            <div class="max-w-4xl mx-auto">
+                <div
+                    class="bg-slate-800/50 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-amber-500/20 shadow-2xl">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="space-y-6">
+                            <h3 class="text-2xl font-bold font-playfair text-amber-400 mb-6">¡Hablemos!</h3>
+                            <p class="text-gray-300 leading-relaxed mb-8">
+                                ¿Tienes un proyecto en mente? Me encantaría escuchar tus ideas
+                                y colaborar contigo para hacerlas realidad.
+                            </p>
+
+                            <div class="space-y-4">
+                                <a href="mailto:tu@email.com"
+                                    class="flex items-center gap-4 text-gray-300 hover:text-amber-400 transition-colors group">
+                                    <div
+                                        class="w-12 h-12 bg-amber-500/20 rounded-full flex items-center justify-center group-hover:bg-amber-500/30 transition-colors">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <span>tu@email.com</span>
+                                </a>
+
+                                <a href="https://github.com" target="_blank"
+                                    class="flex items-center gap-4 text-gray-300 hover:text-amber-400 transition-colors group">
+                                    <div
+                                        class="w-12 h-12 bg-amber-500/20 rounded-full flex items-center justify-center group-hover:bg-amber-500/30 transition-colors">
+                                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                            <path
+                                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                        </svg>
+                                    </div>
+                                    <span>GitHub</span>
+                                </a>
+
+                                <a href="https://linkedin.com" target="_blank"
+                                    class="flex items-center gap-4 text-gray-300 hover:text-amber-400 transition-colors group">
+                                    <div
+                                        class="w-12 h-12 bg-amber-500/20 rounded-full flex items-center justify-center group-hover:bg-amber-500/30 transition-colors">
+                                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                            <path
+                                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                        </svg>
+                                    </div>
+                                    <span>LinkedIn</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-center">
+                            <div class="w-64 h-64 relative">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-br from-amber-500/20 to-orange-500/20 rounded-full animate-pulse">
+                                </div>
+                                <div
+                                    class="absolute inset-4 bg-slate-800 rounded-full flex items-center justify-center">
+                                    <svg class="w-32 h-32 text-amber-500" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="1.5">
+                                        <path
+                                            d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-amber-500/20">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <p class="text-gray-400 mb-4">
+                    &copy; 2024 Mi Portafolio. Diseñado con
+                    <span class="text-amber-500">♥</span>
+                    y con inspiración de la naturaleza
+                </p>
+                <div class="flex justify-center items-center gap-2 text-amber-500/50">
+                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M11,8V16H13V8H11Z" />
+                    </svg>
+                    <span class="text-sm">Desarrollado con HTML, Tailwind CSS y JavaScript</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
